@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Trw-cK-bLe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="DDt-BC-8Tp">
+            <objects>
+                <viewController id="Trw-cK-bLe" customClass="ViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WvT-A1-UWc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhW-KO-RWa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Settings" id="SEN-8T-HW1">
+                                        <connections>
+                                            <action selector="settingsOnClick:" destination="Trw-cK-bLe" id="gKe-P2-cLE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DpR-fs-rcI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="quizCell" rowHeight="133" id="WbC-f9-tue" customClass="iQuizTableViewCell" customModule="iQuiz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="133"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WbC-f9-tue" id="uD8-wl-Lfi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="132.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MM3-jJ-IOt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="Oxy-Bp-XtT"/>
+                                                        <constraint firstAttribute="width" secondItem="MM3-jJ-IOt" secondAttribute="height" multiplier="51:44" id="XwV-zc-pND"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOt-PN-8Pi">
+                                                    <rect key="frame" x="51" y="0.0" width="324" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoR-Eg-IC8">
+                                                    <rect key="frame" x="0.0" y="44" width="375" height="88"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MM3-jJ-IOt" firstAttribute="top" secondItem="uD8-wl-Lfi" secondAttribute="top" id="W9A-7u-Ebc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="VoR-Eg-IC8" secondAttribute="bottom" constant="-10" id="eKy-Me-6QY"/>
+                                                <constraint firstItem="VoR-Eg-IC8" firstAttribute="top" secondItem="MM3-jJ-IOt" secondAttribute="bottom" id="gnw-2x-CKR"/>
+                                                <constraint firstItem="MM3-jJ-IOt" firstAttribute="leading" secondItem="VoR-Eg-IC8" secondAttribute="leading" id="j5d-PS-ebx"/>
+                                                <constraint firstItem="qOt-PN-8Pi" firstAttribute="trailing" secondItem="VoR-Eg-IC8" secondAttribute="trailing" id="rcn-Z3-SKi"/>
+                                                <constraint firstItem="MM3-jJ-IOt" firstAttribute="leading" secondItem="uD8-wl-Lfi" secondAttribute="leading" id="sVJ-dD-dXg"/>
+                                                <constraint firstItem="MM3-jJ-IOt" firstAttribute="top" secondItem="qOt-PN-8Pi" secondAttribute="top" id="uVA-t8-mev"/>
+                                                <constraint firstAttribute="trailing" secondItem="qOt-PN-8Pi" secondAttribute="trailing" id="udp-52-AIL"/>
+                                                <constraint firstItem="MM3-jJ-IOt" firstAttribute="bottom" secondItem="qOt-PN-8Pi" secondAttribute="bottom" id="zYj-Jt-8CJ"/>
+                                                <constraint firstItem="qOt-PN-8Pi" firstAttribute="leading" secondItem="MM3-jJ-IOt" secondAttribute="trailing" id="zd3-Bj-zv6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="iQuizDescription" destination="VoR-Eg-IC8" id="z9R-D0-vGn"/>
+                                            <outlet property="iQuizImage" destination="MM3-jJ-IOt" id="qiO-Ka-UyN"/>
+                                            <outlet property="iQuizTitle" destination="qOt-PN-8Pi" id="AFx-Py-JDe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DpR-fs-rcI" firstAttribute="leading" secondItem="4kA-zP-dfE" secondAttribute="leading" id="I0Q-Pp-dV6"/>
+                            <constraint firstItem="DpR-fs-rcI" firstAttribute="top" secondItem="vhW-KO-RWa" secondAttribute="bottom" id="MXi-Fx-cbX"/>
+                            <constraint firstItem="vhW-KO-RWa" firstAttribute="trailing" secondItem="4kA-zP-dfE" secondAttribute="trailing" id="Oc5-HF-KUd"/>
+                            <constraint firstItem="vhW-KO-RWa" firstAttribute="top" secondItem="4kA-zP-dfE" secondAttribute="top" id="PWD-gB-XSc"/>
+                            <constraint firstItem="DpR-fs-rcI" firstAttribute="bottom" secondItem="4kA-zP-dfE" secondAttribute="bottom" id="gEy-WA-Uxb"/>
+                            <constraint firstItem="DpR-fs-rcI" firstAttribute="trailing" secondItem="4kA-zP-dfE" secondAttribute="trailing" id="xCe-9t-1qe"/>
+                            <constraint firstItem="vhW-KO-RWa" firstAttribute="leading" secondItem="4kA-zP-dfE" secondAttribute="leading" id="yrD-Ht-U8v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4kA-zP-dfE"/>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="DpR-fs-rcI" id="E2z-uk-zE5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fwR-LY-wO4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599.20000000000005" y="-522.18890554722645"/>
+        </scene>
+    </scenes>
+</document>
