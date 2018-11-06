@@ -10,32 +10,22 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var quizzes = [Quiz]()
+//    var quizzes = [Quiz]()
     @IBOutlet weak var table: UITableView!
+    
+    var quizData = AppData.shared
+    var quizzes = AppData.shared.quizzes
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadQuizes()
+        table.delegate = self
         table.dataSource = self
+        table.tableFooterView = UIView()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    private func loadQuizes() {
-        let memeIcon = UIImage(named: "Bad_Luck_Brian")
-        let memeQuiz = Quiz(title: "Meme Quiz", description: "Yeet on in to test your knowledge of the today's spicest memes. ", icon: memeIcon!)
-        
-        let mathIcon = UIImage(named: "math_img")
-        let mathQuiz = Quiz(title: "Math Quiz", description: "Test your knowlege on this quiz that tests your math skills.", icon: mathIcon!)
-        
-        let theOfficeIcon = UIImage(named: "the_office")
-        let officeQuiz = Quiz(title: "The Office Quiz", description: "How well do you know The Office? Test your skills here!", icon: theOfficeIcon!)
-        
-        quizzes += [memeQuiz, mathQuiz, officeQuiz]
-    }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return quizzes.count
@@ -59,11 +49,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        quizData.topicIndex = indexPath.row
+        quizData.questionIndex = 0
+        performSegue(withIdentifier: "toQuestions", sender: self)
+    }
+    
 }
+    
 
-struct Quiz {
-    var title: String
-    var description: String
-    var icon: UIImage
-}
 
