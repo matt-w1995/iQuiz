@@ -53,7 +53,6 @@ class QuestionViewController: UIViewController {
     @IBAction func btnActionHandler(_ sender: UIButton) {
         sender.backgroundColor = UIColor.lightGray
         appdata.userResponse = sender.titleLabel?.text as! String
-        
         performSegue(withIdentifier: "toAnswers", sender: self)
     }
 }
