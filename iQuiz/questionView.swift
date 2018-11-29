@@ -32,21 +32,12 @@ class QuestionViewController: UIViewController {
     func loadQAView() {
         let topicIndex = appdata.topicIndex
         let quiz = appdata.quizzes[topicIndex]
-        switch appdata.questionIndex {
-        case 0:
-            questionText.text = quiz.questionOne
-            answerOne.setTitle(quiz.questionOneOptions[0], for: [])
-            answerTwo.setTitle(quiz.questionOneOptions[1], for: [])
-            answerThree.setTitle(quiz.questionOneOptions[2], for: [])
-            answerFour.setTitle(quiz.questionOneOptions[3], for: [])
-            
-        default:
-            questionText.text = quiz.questionTwo
-            answerOne.setTitle(quiz.questionTwoOptions[0], for: [])
-            answerTwo.setTitle(quiz.questionTwoOptions[1], for: [])
-            answerThree.setTitle(quiz.questionTwoOptions[2], for: [])
-            answerFour.setTitle(quiz.questionTwoOptions[3], for: [])
-        }
+        let question = quiz.questions[appdata.questionIndex]
+        questionText.text = question.text
+        answerOne.setTitle(question.answers[0], for: [])
+        answerTwo.setTitle(question.answers[1], for: [])
+        answerThree.setTitle(question.answers[2], for: [])
+        answerFour.setTitle(question.answers[3], for: [])
     }
     
     

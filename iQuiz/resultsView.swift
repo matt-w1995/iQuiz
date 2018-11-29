@@ -21,7 +21,8 @@ class resultsView: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     
     func renderScoreLabel() {
-        scoreLabel.text = "You got " + String(appdata.userScore) + " out of 2!"
+        scoreLabel.text = "You got " + String(appdata.userScore) + " out of " + String(appdata.quizzes[appdata.topicIndex].questions.count)
+        appdata.userScore = 0
     }
 }
 
