@@ -13,6 +13,10 @@
 		33710C5D218795ED0049A307 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33710C5C218795ED0049A307 /* Assets.xcassets */; };
 		33710C60218795ED0049A307 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33710C5E218795ED0049A307 /* LaunchScreen.storyboard */; };
 		33710C6821879D230049A307 /* iQuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33710C6721879D230049A307 /* iQuizTableViewCell.swift */; };
+		33B1CB872190F14F00983B93 /* QuizDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B1CB862190F14F00983B93 /* QuizDTO.swift */; };
+		33B1CB892190F67E00983B93 /* questionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B1CB882190F67E00983B93 /* questionView.swift */; };
+		33B1CB8B21910CD000983B93 /* answerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B1CB8A21910CD000983B93 /* answerView.swift */; };
+		33B1CB8D219137EE00983B93 /* resultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B1CB8C219137EE00983B93 /* resultsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		33710C5F218795ED0049A307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33710C61218795ED0049A307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33710C6721879D230049A307 /* iQuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iQuizTableViewCell.swift; sourceTree = "<group>"; };
+		33B1CB862190F14F00983B93 /* QuizDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDTO.swift; sourceTree = "<group>"; };
+		33B1CB882190F67E00983B93 /* questionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionView.swift; sourceTree = "<group>"; };
+		33B1CB8A21910CD000983B93 /* answerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = answerView.swift; sourceTree = "<group>"; };
+		33B1CB8C219137EE00983B93 /* resultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,23 +64,19 @@
 		33710C54218795EB0049A307 /* iQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				33710C6B2187A4C60049A307 /* Img */,
 				33710C55218795EB0049A307 /* AppDelegate.swift */,
+				33B1CB862190F14F00983B93 /* QuizDTO.swift */,
 				33710C57218795EB0049A307 /* ViewController.swift */,
 				33710C59218795EB0049A307 /* Main.storyboard */,
 				33710C5C218795ED0049A307 /* Assets.xcassets */,
 				33710C5E218795ED0049A307 /* LaunchScreen.storyboard */,
 				33710C61218795ED0049A307 /* Info.plist */,
 				33710C6721879D230049A307 /* iQuizTableViewCell.swift */,
+				33B1CB882190F67E00983B93 /* questionView.swift */,
+				33B1CB8A21910CD000983B93 /* answerView.swift */,
+				33B1CB8C219137EE00983B93 /* resultsView.swift */,
 			);
 			path = iQuiz;
-			sourceTree = "<group>";
-		};
-		33710C6B2187A4C60049A307 /* Img */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33B1CB892190F67E00983B93 /* questionView.swift in Sources */,
+				33B1CB872190F14F00983B93 /* QuizDTO.swift in Sources */,
 				33710C58218795EB0049A307 /* ViewController.swift in Sources */,
 				33710C6821879D230049A307 /* iQuizTableViewCell.swift in Sources */,
+				33B1CB8D219137EE00983B93 /* resultsView.swift in Sources */,
+				33B1CB8B21910CD000983B93 /* answerView.swift in Sources */,
 				33710C56218795EB0049A307 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
